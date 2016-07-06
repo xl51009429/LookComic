@@ -1,0 +1,85 @@
+//
+//  LookComic.pch
+//  LookComic
+//
+//  Created by 解梁 on 16/5/5.
+//  Copyright © 2016年 5i5j. All rights reserved.
+//
+
+#ifndef LookComic_pch
+#define LookComic_pch
+
+
+/////////////////////////// 屏幕尺寸
+
+
+//屏幕宽高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//屏幕适配比例
+#define kScreen320Scale kScreenWidth/320.0
+#define kScreen375Scale kScreenWidth/375.0
+
+//边距
+#define kPadding 10
+
+//轮播图高度
+#define kHeaderHeight  kScreenWidth/375.0 * 235.0
+
+#define kChapterHeaderHeight 200 * kScreenWidth/320.0
+
+/////////////////////////// 后台接口
+
+
+//服务器地址
+#define server @"http://api.kuaikanmanhua.com/v1/"
+
+//书城轮播图API
+#define kBannersAPI [NSString stringWithFormat:@"%@banners",server]
+
+//书城栏目标题API
+#define kSectionListTitleAPI [NSString stringWithFormat:@"%@tag/suggestion",server]
+
+//书城栏目详情API
+#define kSectionListInfoAPI [NSString stringWithFormat:@"%@topics",server]
+
+//获取漫画章节
+#define kChapterListAPI [NSString stringWithFormat:@"%@topics/",server]
+
+//漫画详情
+#define kComicDetailAPI [NSString stringWithFormat:@"%@comics/",server]
+
+//搜索漫画 参数 keyword limit offset
+#define kSearchComicAPI [NSString stringWithFormat:@"%@topics/search",server]
+
+//登录传别名等信息
+#define kPushInfo [NSString stringWithFormat:@"%@device/push_info",server]
+
+//获取登录信息
+#define kSignUp [NSString stringWithFormat:@"%@oauth/signup",server]
+
+#define kSearchComicLimitCount 20
+
+
+/////////////////////////// 常用全局
+
+
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+#define kWeiBoAppKey @"3126802228"
+
+
+/////////////////////////// 常用头文件
+
+#import "AFNetworking.h"
+#import "NetUtil.h"
+#import "XLUtil.h"
+#import <SVProgressHUD.h>
+
+
+#endif /* LookComic_pch */

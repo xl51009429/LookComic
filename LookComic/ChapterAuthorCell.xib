@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChapterAuthorCellId" id="gTV-IL-0wX" customClass="ChapterAuthorCell">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="72"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y84-PT-1g0">
+                        <rect key="frame" x="10" y="10" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="y84-PT-1g0" secondAttribute="height" multiplier="1:1" id="OGk-dQ-6r1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fk-rm-9wM">
+                        <rect key="frame" x="72" y="25" width="195" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="fnB-kC-RH5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cM-fp-foF">
+                        <rect key="frame" x="0.0" y="71" width="287" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ddE-yO-ZwJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="9cM-fp-foF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Cf-FN-bYS"/>
+                <constraint firstItem="y84-PT-1g0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="4LW-Xa-teX"/>
+                <constraint firstItem="y84-PT-1g0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="7kl-Tl-AOl"/>
+                <constraint firstAttribute="bottom" secondItem="y84-PT-1g0" secondAttribute="bottom" constant="10" id="FeA-j7-wOL"/>
+                <constraint firstItem="5fk-rm-9wM" firstAttribute="centerY" secondItem="y84-PT-1g0" secondAttribute="centerY" id="Okn-FS-ff8"/>
+                <constraint firstAttribute="bottom" secondItem="9cM-fp-foF" secondAttribute="bottom" id="QYJ-d6-Vlb"/>
+                <constraint firstItem="5fk-rm-9wM" firstAttribute="leading" secondItem="y84-PT-1g0" secondAttribute="trailing" constant="10" id="sSp-Pf-6tw"/>
+                <constraint firstAttribute="trailing" secondItem="5fk-rm-9wM" secondAttribute="trailing" constant="20" id="wVV-E3-KDC"/>
+                <constraint firstAttribute="trailing" secondItem="9cM-fp-foF" secondAttribute="trailing" id="wk7-63-8K5"/>
+            </constraints>
+            <size key="customSize" width="287" height="72"/>
+            <connections>
+                <outlet property="imageView" destination="y84-PT-1g0" id="Vss-j2-Omp"/>
+                <outlet property="nickName" destination="5fk-rm-9wM" id="xkx-af-dwU"/>
+            </connections>
+            <point key="canvasLocation" x="267.5" y="203"/>
+        </collectionViewCell>
+    </objects>
+</document>
