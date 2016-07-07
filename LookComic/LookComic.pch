@@ -76,10 +76,9 @@ alpha:1.0]
 
 /////////////////////////// 常用头文件
 
-#import "AFNetworking.h"
-#import "NetUtil.h"
 #import "XLUtil.h"
 #import <SVProgressHUD.h>
+#import <MGJRequestManager.h>
 
 
 #endif /* LookComic_pch */

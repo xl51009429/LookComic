@@ -4,7 +4,7 @@ platform :ios, '7.0'
 
 target ‘LookComic’ do
 
-pod 'AFNetworking', '~> 3.1'
+pod 'AFNetworking', '~> 2.6'
 
 pod 'SDWebImage', '~>3.7'
 
@@ -25,5 +25,7 @@ pod 'JSPatch'
 pod 'MLeaksFinder'
 
 pod 'Appirater'
+
+pod 'MGJRequestManager'
 
 end

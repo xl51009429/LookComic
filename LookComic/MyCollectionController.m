@@ -8,7 +8,6 @@
 
 #import "MyCollectionController.h"
 #import "MyCollectionView.h"
-#import "NetUtil.h"
 #import "DBUtil.h"
 #import <MJRefresh.h>
 #import <Masonry.h>

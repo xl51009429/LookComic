@@ -1,18 +1,24 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Appirater (2.0.5)
   - FMDB (2.6.2):
@@ -23,6 +29,8 @@ PODS:
     - JSPatch/Core (= 1.0)
   - JSPatch/Core (1.0)
   - Masonry (1.0.1)
+  - MGJRequestManager (0.8.2):
+    - AFNetworking (~> 2.0)
   - MJRefresh (3.1.0)
   - MLeaksFinder (0.1.1)
   - SDWebImage (3.8.0):
@@ -32,12 +40,13 @@ PODS:
   - UMengSocialCOM (5.2.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1)
+  - AFNetworking (~> 2.6)
   - Appirater
   - FMDB
   - FXBlurView
   - JSPatch
   - Masonry
+  - MGJRequestManager
   - MJRefresh
   - MLeaksFinder
   - SDWebImage (~> 3.7)
@@ -45,18 +54,19 @@ DEPENDENCIES:
   - UMengSocialCOM (~> 5.2)
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MGJRequestManager: 912b56c5127478c93d70a53592245c07bb32ab88
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   MLeaksFinder: 25e38f8ca9438354aa4184f65148e671f5d18620
   SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UMengSocialCOM: 074c135ce349aa4c8848d3fb8458757bcb6ffb67
 
-PODFILE CHECKSUM: 2d311180f74072a4fd8085cc31d291977bc644c2
+PODFILE CHECKSUM: 50505d29fccc179f472b80ce9b4c5eb0eef77a2f
 
 COCOAPODS: 1.0.1

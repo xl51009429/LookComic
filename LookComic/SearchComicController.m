@@ -44,7 +44,8 @@
                           @"offset":@0};
     [SVProgressHUD show];
     __weak typeof(self) weakSelf = self;
-    [NetUtil GET:kSearchComicAPI param:dic finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+    [[MGJRequestManager sharedInstance]GET:kSearchComicAPI parameters:dic startImmediately:YES configurationHandler:nil completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+        NSDictionary *obj = (NSDictionary *)result;
         if (!error) {
             if ([obj[@"code"] isEqual:@200]) {
                 [SVProgressHUD dismiss];

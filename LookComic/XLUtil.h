@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface XLUtil : NSObject
 
 + (UIImage*)OriginImage:(UIImage *)image scaleToSize:(CGSize)size;

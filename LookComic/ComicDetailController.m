@@ -36,7 +36,8 @@
 - (void)requestData
 {
     if (_chapterID) {
-        [NetUtil GET:[kComicDetailAPI stringByAppendingFormat:@"%@",self.chapterID] param:nil finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+        [[MGJRequestManager sharedInstance]GET:[kComicDetailAPI stringByAppendingFormat:@"%@",self.chapterID] parameters:nil startImmediately:YES configurationHandler:nil completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+            NSDictionary *obj = (NSDictionary *)result;
             if (!error) {
                 if ([obj[@"code"] isEqual:@200]) {
                     ChapterModel *chapter = [ChapterModel modelWithDictionary:obj[@"data"]];

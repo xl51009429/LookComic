@@ -47,7 +47,6 @@
 		70C83C7B1CF599280012C397 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C83C7A1CF599280012C397 /* LoginView.m */; };
 		70D0B6421CDC2DE70085F7C8 /* ComicStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D0B6411CDC2DE70085F7C8 /* ComicStoreController.m */; };
 		70D0B6451CDC33020085F7C8 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D0B6441CDC33020085F7C8 /* SectionModel.m */; };
-		70D0B64B1CDC39BE0085F7C8 /* NetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D0B64A1CDC39BE0085F7C8 /* NetUtil.m */; };
 		70D0B64E1CDC41290085F7C8 /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D0B64D1CDC41290085F7C8 /* BannerModel.m */; };
 		70D0B6551CDC42120085F7C8 /* XLImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D0B6511CDC42120085F7C8 /* XLImageItem.m */; };
 		70D0B6561CDC42120085F7C8 /* XLImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D0B6521CDC42120085F7C8 /* XLImageItem.xib */; };
@@ -179,8 +178,6 @@
 		70D0B6411CDC2DE70085F7C8 /* ComicStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicStoreController.m; sourceTree = "<group>"; };
 		70D0B6431CDC33020085F7C8 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
 		70D0B6441CDC33020085F7C8 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
-		70D0B6491CDC39BE0085F7C8 /* NetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetUtil.h; sourceTree = "<group>"; };
-		70D0B64A1CDC39BE0085F7C8 /* NetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetUtil.m; sourceTree = "<group>"; };
 		70D0B64C1CDC41290085F7C8 /* BannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
 		70D0B64D1CDC41290085F7C8 /* BannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
 		70D0B6501CDC42120085F7C8 /* XLImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLImageItem.h; sourceTree = "<group>"; };
@@ -597,8 +594,6 @@
 			children = (
 				709BB7BD1CE99F18001125A9 /* XLSandbox.h */,
 				709BB7BE1CE99F18001125A9 /* XLSandbox.m */,
-				70D0B6491CDC39BE0085F7C8 /* NetUtil.h */,
-				70D0B64A1CDC39BE0085F7C8 /* NetUtil.m */,
 				70928E9E1CE338160057A285 /* XLUtil.h */,
 				70928E9F1CE338160057A285 /* XLUtil.m */,
 				709BB7C01CE9A065001125A9 /* DBUtil.h */,
@@ -963,7 +958,6 @@
 				70D3BD6E1CE01EA500E3CD03 /* TopicsModel.m in Sources */,
 				70F8EC031D2A4247001B23CB /* CTMediator+ComicStoreActions.m in Sources */,
 				70D3BD8D1CE06DD700E3CD03 /* LeftImageContentView.m in Sources */,
-				70D0B64B1CDC39BE0085F7C8 /* NetUtil.m in Sources */,
 				70D0B65A1CDC46AC0085F7C8 /* ComicStoreSectionListView.m in Sources */,
 				70F8EC191D2A543C001B23CB /* Target_Personal.m in Sources */,
 				70C064CB1D29F1C900D53BA4 /* CTMediator.m in Sources */,

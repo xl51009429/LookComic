@@ -43,13 +43,13 @@
                                   @"oauth_token":snsAccount.accessToken,
                                   @"oauth_uid":snsAccount.usid
                                   };
-            [NetUtil POST:kSignUp param:dic finish:^(NSData *data, NSDictionary *obj, NSError *error) {
-                if (!error) {
-                    NSLog(@"%@",obj);
-                }else{
-                    NSLog(@"%@",error);
-                }
-            }];
+//            [NetUtil POST:kSignUp param:dic finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+//                if (!error) {
+//                    NSLog(@"%@",obj);
+//                }else{
+//                    NSLog(@"%@",error);
+//                }
+//            }];
             
 //            NSDictionary *dic = @{@"alias_id":@"13229247",
 //                                  @"muid":@"b27a56c93014fa052872888d5c7351ca",

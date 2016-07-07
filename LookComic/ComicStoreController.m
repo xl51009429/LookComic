@@ -50,7 +50,10 @@
     __weak typeof(self) weakSelf = self;
     //请求banner
     [SVProgressHUD show];
-    [NetUtil GET:kBannersAPI param:nil finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+    [[MGJRequestManager sharedInstance]GET:kBannersAPI parameters:nil startImmediately:YES configurationHandler:^(MGJRequestManagerConfiguration *configuration) {
+        configuration.resultCacheDuration = 3600;  //缓存1h
+    } completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+        NSDictionary *obj = (NSDictionary *)result;
         if (!error) {
             if ([obj[@"code"] isEqual:@200]) {
                 for (NSDictionary *dic in obj[@"data"][@"banner_group"]) {
@@ -71,7 +74,10 @@
 //请求内容列表
 - (void)requestSectionList
 {
-    [NetUtil GET:kSectionListTitleAPI param:nil finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+    [[MGJRequestManager sharedInstance]GET:kSectionListTitleAPI parameters:nil startImmediately:YES configurationHandler:^(MGJRequestManagerConfiguration *configuration) {
+        configuration.resultCacheDuration = 3600;
+    } completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+        NSDictionary *obj = (NSDictionary *)result;
         if (!error) {
             if ([obj[@"code"] isEqual:@200]) {
                 for (NSDictionary *dic in obj[@"data"][@"suggestion"]) {
@@ -80,6 +86,7 @@
                 }
                 self.sectionListView.sectionArray =  self.sectionArray;
                 [SVProgressHUD dismiss];
+                NSMutableArray *operations = [[NSMutableArray alloc]init];
                 //请求cell中的cell列表
                 [self.sectionArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     SectionModel *section = (SectionModel *)obj;
@@ -87,7 +94,10 @@
                     NSDictionary *param = @{@"limit": @(section.contentCount),
                                             @"offset": @0,
                                             @"tag": section.title};
-                    [NetUtil GET:kSectionListInfoAPI param:param finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+                    AFHTTPRequestOperation *operation = [[MGJRequestManager sharedInstance]GET:kSectionListInfoAPI parameters:param startImmediately:NO configurationHandler:^(MGJRequestManagerConfiguration *configuration) {
+                        configuration.resultCacheDuration = 3600;
+                    } completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+                        NSDictionary *obj = (NSDictionary *)result;
                         if (!error) {
                             if ([obj[@"code"] isEqual:@200]) {
                                 NSMutableArray *topics = [[NSMutableArray alloc]init];
@@ -103,7 +113,9 @@
                             NSLog(@"error:%@",error);
                         }
                     }];
+                    [operations addObject:operation];
                 }];
+                [[MGJRequestManager sharedInstance]batchOfRequestOperations:operations progressBlock:nil completionBlock:nil];
             }else{
                 //请求错误
             }

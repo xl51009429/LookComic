@@ -43,7 +43,8 @@
 - (void)requestChapter
 {
     [SVProgressHUD show];
-    [NetUtil GET:[kChapterListAPI stringByAppendingFormat:@"%@",_bookID] param:nil finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+    [[MGJRequestManager sharedInstance]GET:[kChapterListAPI stringByAppendingFormat:@"%@",_bookID] parameters:nil startImmediately:YES configurationHandler:nil completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+        NSDictionary *obj = (NSDictionary *)result;
         if (!error) {
             if ([obj[@"code"] isEqual:@200]) {
                 TopicsModel *topic = [TopicsModel modelWithDictionary:obj[@"data"]];

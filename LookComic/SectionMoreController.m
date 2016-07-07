@@ -50,7 +50,8 @@
     NSDictionary *param = @{@"limit": @(kSearchComicLimitCount),
                                                 @"offset": @(kSearchComicLimitCount * self.index),
                                                 @"tag": _sectionTitle};
-    [NetUtil GET:kSectionListInfoAPI param:param finish:^(NSData *data, NSDictionary *obj, NSError *error) {
+    [[MGJRequestManager sharedInstance]GET:kSectionListInfoAPI parameters:param startImmediately:YES configurationHandler:nil completionHandler:^(NSError *error, id result, BOOL isFromCache, AFHTTPRequestOperation *operation) {
+        NSDictionary *obj = (NSDictionary *)result;
         if (!error) {
             if ([obj[@"code"] isEqual:@200]) {
                 if (self.index == 0) {
